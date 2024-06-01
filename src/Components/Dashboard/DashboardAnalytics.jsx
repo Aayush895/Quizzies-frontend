@@ -59,7 +59,7 @@ const DashboardAnalytics = () => {
       <div id={styles.trendingQuizContainer}>
         <div id={styles.header}>
           <h1>Trending Quizs</h1>
-          {!allQuiz ? (
+          {allQuiz === null ? (
             <p>No trending quiz available</p>
           ) : (
             <div id={styles.allQuizContainer}>
