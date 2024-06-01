@@ -1,0 +1,149 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-color: #edededed;
+}
+
+#quizContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#totalQuiz,
+#totalQuestions,
+#totalImpressions {
+  margin: 0 1rem;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#totalQuiz {
+  padding: 1.5rem 4rem;
+  width: 25%;
+  color: #ff5d01;
+}
+
+#totalQuiz > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#totalQuiz > p > span {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-right: 1.5rem;
+}
+
+#totalQuestions {
+  padding: 1.5rem 2rem;
+  width: 25%;
+  color: #60b84b;
+}
+
+#totalQuestions > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#totalQuestions > p > span {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+#totalImpressions {
+  padding: 1.5rem 2rem;
+  width: 25%;
+  color: #5076ff;
+}
+
+#totalImpressions > p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#totalImpressions > p > span {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+#trendingQuizContainer {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#trendingQuizContainer > #header {
+  width: 70%;
+  padding: 1rem 0.5rem;
+}
+
+#trendingQuizContainer > #header > h1 {
+  margin-bottom: 4rem;
+  font-family: sans-serif;
+  color: #474444;
+}
+
+#trendingQuizContainer > #header > p {
+  text-align: center;
+  font-family: sans-serif;
+  color: #474444;
+  font-weight: bold;
+}
+
+#allQuizContainer {
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 13rem 13rem 13rem;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: scroll;
+  height: 35vh;
+}
+
+#quizInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+#quizInfo > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+#quizInfo > div > p {
+  font-weight: bold;
+  font-size: xx-large;
+  color: #474444;
+}
+
+#quizInfo > div > p:last-child {
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+  color: #ff5d01;
+}
+
+#quizInfo > p {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #60b84b;
+}
+
+#quizInfo > p > span {
+  margin-left: 0.5rem;
+}

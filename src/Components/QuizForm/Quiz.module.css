@@ -1,0 +1,171 @@
+#outerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  color: #474444;
+  background-color: #041325;
+}
+
+#container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+
+#quizContainer {
+  width: 60%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#questionContainer > p {
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+#questionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+#questionHeader > p {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+#questionContainer {
+  margin-bottom: 3rem;
+}
+
+#optionsContainer {
+  display: grid;
+  grid-template-columns: 15rem 15rem;
+  grid-gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  margin-bottom: 3rem;
+}
+
+#options {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-size: xx-large;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#textImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#textImg > img {
+  height: 80px;
+  width: 90px;
+  border-radius: 0.5rem;
+}
+
+button {
+  background-color: #60b84b;
+  color: #fff;
+  width: 30%;
+  margin-top: 2rem;
+  padding: 1rem 0;
+  border: none;
+  border-radius: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#congratsPage > p {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+#congratsPage > p > span {
+  color: #60b84b;
+}
+
+@media (max-width: 932px) {
+  #container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  #optionsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  #options {
+    width: 80%;
+  }
+
+  #questionHeader {
+    padding: 0 1.5rem;
+  }
+
+  #quizContainer {
+    width: 100%;
+  }
+
+  button {
+    width: 60%;
+  }
+
+  #congratsPage {
+    padding: 0 1rem;
+  }
+
+  #congratsPage > h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 844px) {
+  #outerContainer {
+    height: 115vh;
+  }
+
+  #container {
+    height: 115vh;
+  }
+}
+
+@media (max-width: 780px) {
+  #outerContainer {
+    height: 120vh;
+  }
+
+  #container {
+    height: 120vh;
+  }
+}
+
+@media (max-width: 568px) {
+  #outerContainer {
+    height: 160vh;
+  }
+
+  #container {
+    height: 160vh;
+  }
+}
