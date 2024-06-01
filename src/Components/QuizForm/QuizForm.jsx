@@ -37,7 +37,9 @@ const QuizForm = ({ setshowlinkForm, setLink }) => {
         }
       )
 
-      setLink(`${window.location.origin}/quiz?quizId=${res.data.data._id}`)
+      setLink(
+        `${window.location.href}/quiz?quizId=${res.data.data._id}`
+      )
       setshowlinkForm(true)
       setshowQuizForm(false)
     } catch (error) {
