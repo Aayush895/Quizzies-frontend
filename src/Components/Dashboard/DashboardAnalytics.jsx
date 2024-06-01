@@ -10,6 +10,12 @@ const DashboardAnalytics = () => {
   const [totalQuiz, settotalQuiz] = useState(null)
   const [totalQuestion, settotalQuestion] = useState(null)
 
+  const override = {
+    display: 'block',
+    margin: '5rem auto',
+    borderColor: 'red',
+  }
+
   const fetchallQuiz = async () => {
     const quizData = await axios.get(
       'https://quizzies-backend-production.up.railway.app/quiz/quizzes'
@@ -61,7 +67,7 @@ const DashboardAnalytics = () => {
         <div id={styles.header}>
           <h1>Trending Quizs</h1>
           {allQuiz === null ? (
-            <BounceLoader color="#8f9493" />
+            <BounceLoader color="#8f9493" cssOverride={override}/>
           ) : (
             <div id={styles.allQuizContainer}>
               {allQuiz.length === 0 ? (
