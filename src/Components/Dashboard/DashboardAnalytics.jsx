@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import styles from './DashboardAnalytics.module.css'
 import { IoEyeSharp } from 'react-icons/io5'
+import BounceLoader from 'react-spinners/BounceLoader'
 
 const DashboardAnalytics = () => {
   const [allQuiz, setallQuiz] = useState(null)
@@ -60,38 +61,45 @@ const DashboardAnalytics = () => {
         <div id={styles.header}>
           <h1>Trending Quizs</h1>
           {allQuiz === null ? (
-            <p>No trending quiz available</p>
+            <BounceLoader color="#8f9493" />
           ) : (
             <div id={styles.allQuizContainer}>
-              {allQuiz.map((quiz) => {
-                return (
-                  <div key={quiz._id} id={styles.quizInfo}>
-                    <div>
-                      <p>{quiz.title}</p>
+              {allQuiz.length === 0 ? (
+                <p>No trending quiz available</p>
+              ) : (
+                allQuiz.map((quiz) => {
+                  return (
+                    <div key={quiz._id} id={styles.quizInfo}>
+                      <div>
+                        <p>{quiz.title}</p>
+                        <p>
+                          {localStorage.getItem(
+                            `${window.location.origin}/quiz?quizId=${quiz._id}`
+                          )
+                            ? localStorage.getItem(
+                                `${window.location.origin}/quiz?quizId=${quiz._id}`
+                              )
+                            : 0}
+                          <IoEyeSharp style={{ marginLeft: '0.3rem' }} />
+                        </p>
+                      </div>
                       <p>
-                        {localStorage.getItem(
-                          `${window.location.origin}/quiz?quizId=${quiz._id}`
-                        )
-                          ? localStorage.getItem(
-                              `${window.location.origin}/quiz?quizId=${quiz._id}`
-                            )
-                          : 0}
-                        <IoEyeSharp style={{ marginLeft: '0.3rem' }} />
+                        Created on:
+                        <span>
+                          {new Date(quiz.createdAt).toLocaleDateString(
+                            'en-GB',
+                            {
+                              day: '2-digit',
+                              month: 'short',
+                              year: 'numeric',
+                            }
+                          )}
+                        </span>
                       </p>
                     </div>
-                    <p>
-                      Created on:
-                      <span>
-                        {new Date(quiz.createdAt).toLocaleDateString('en-GB', {
-                          day: '2-digit',
-                          month: 'short',
-                          year: 'numeric',
-                        })}
-                      </span>
-                    </p>
-                  </div>
-                )
-              })}
+                  )
+                })
+              )}
             </div>
           )}
         </div>
